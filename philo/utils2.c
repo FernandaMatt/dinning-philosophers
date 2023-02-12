@@ -16,17 +16,17 @@ int	check_meals(t_dat *dat)
 {
 	int	ret;
 
-	pthread_mutex_lock(dat->loopm);
+	pthread_mutex_lock(dat->meals);
 	ret = dat->n_meals;
-	pthread_mutex_unlock(dat->loopm);
+	pthread_mutex_unlock(dat->meals);
 	return (ret);
 }
 
 void	update_meals(t_dat *dat)
 {
-	pthread_mutex_lock(dat->loopm);
+	pthread_mutex_lock(dat->meals);
 	dat->n_meals++;
-	pthread_mutex_unlock(dat->loopm);
+	pthread_mutex_unlock(dat->meals);
 }
 
 void	ft_printf(char *str, unsigned long time, t_philo *philo)

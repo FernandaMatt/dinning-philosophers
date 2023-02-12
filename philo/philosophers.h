@@ -33,6 +33,7 @@ typedef struct s_dat
 	pthread_mutex_t	*forks;
 	pthread_mutex_t	*print;
 	pthread_mutex_t	*loopm;
+	pthread_mutex_t	*meals;
 }	t_dat;
 
 typedef struct s_philo
@@ -61,5 +62,6 @@ void			kill(t_dat *dat);
 void			update(t_dat *dat, unsigned long *var, unsigned long time);
 int				check_meals(t_dat *dat);
 void			update_meals(t_dat *dat);
+void			ft_free(t_philo *philos);
 
 #endif

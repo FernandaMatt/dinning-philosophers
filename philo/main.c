@@ -61,7 +61,7 @@ static void	check_simulation(t_philo *philos)
 			kill(philos->dat);
 			return ;
 		}
-		usleep(200);
+		usleep(50);
 	}
 }
 
@@ -74,17 +74,14 @@ int	main(int argc, char **argv)
 	{
 		if (!check_entry(argv))
 		{
-			printf("Error: parameters should be integers grater than 0.\n");
+			printf("Error: parameters should be integers greater than 0.\n");
 			return (1);
 		}
 		init_params(&dat, argv);
 		philos = init_philos(&dat);
 		check_simulation(philos);
 		terminate_philos(philos, dat.n_philos);
-		free(philos);
-		free(dat.forks);
-		free(dat.print);
-		free(dat.loopm);
+		ft_free(philos);
 	}
 	else
 	{

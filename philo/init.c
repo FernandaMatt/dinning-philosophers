@@ -27,11 +27,13 @@ void	init_params(t_dat *dat, char **argv)
 	dat->forks = malloc(sizeof(pthread_mutex_t) * dat->n_philos);
 	dat->print = malloc(sizeof(pthread_mutex_t));
 	dat->loopm = malloc(sizeof(pthread_mutex_t));
+	dat->meals = malloc(sizeof(pthread_mutex_t));
 	i = -1;
 	while (++i < dat->n_philos)
 		pthread_mutex_init(&dat->forks[i], NULL);
 	pthread_mutex_init(dat->print, NULL);
 	pthread_mutex_init(dat->loopm, NULL);
+	pthread_mutex_init(dat->meals, NULL);
 	dat->loop = 0;
 }
 
