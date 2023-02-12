@@ -30,7 +30,7 @@ void	ft_usleep(unsigned long wait)
 	while (start + wait > now)
 	{
 		now = time_us();
-		usleep(50);
+		usleep(100);
 	}
 	return ;
 }

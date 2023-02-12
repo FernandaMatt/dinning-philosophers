@@ -31,8 +31,6 @@ void	update_meals(t_dat *dat)
 
 void	ft_printf(char *str, unsigned long time, t_philo *philo)
 {
-	if (check_loop(philo->dat))
-		return ;
 	pthread_mutex_lock(philo->dat->print);
 	if (check_loop(philo->dat))
 	{
