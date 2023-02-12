@@ -42,7 +42,6 @@ typedef struct s_philo
 	unsigned long	l_sleep;
 	pthread_t		thid;
 	int				id;
-	pthread_mutex_t	*eat;
 	pthread_mutex_t	*r_fork;
 	pthread_mutex_t	*l_fork;
 	t_dat			*dat;
@@ -53,7 +52,6 @@ int				ft_atoi(char *str);
 void			init_params(t_dat *dat, char **argv);
 t_philo			*init_philos(t_dat *dat);
 void			*routine(void *arg);
-void			*check_death(void *arg);
 unsigned long	time_us(void);
 void			ft_usleep(unsigned long wait);
 int				right_fork(t_philo philo);

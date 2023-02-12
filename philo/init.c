@@ -52,11 +52,8 @@ t_philo	*init_philos(t_dat *dat)
 		philos[i].id = i + 1;
 		philos[i].r_fork = &philos->dat->forks[right_fork(philos[i])];
 		philos[i].l_fork = &philos->dat->forks[i];
-		philos[i].eat = malloc(sizeof(pthread_mutex_t));
-		pthread_mutex_init(philos[i].eat, NULL);
 		philos[i].l_eat = time_us();
 		pthread_create(&philos[i].thid, NULL, routine, &(philos[i]));
-		pthread_create(&philos[i].thid, NULL, check_death, &(philos[i]));
 	}
 	return (philos);
 }

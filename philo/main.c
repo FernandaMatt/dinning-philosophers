@@ -22,43 +22,39 @@ static unsigned long	in_time(t_philo philo)
 {
 	unsigned long	ret;
 
-	pthread_mutex_lock(philo.eat);
+	pthread_mutex_lock(philo.dat->loopm);
 	ret = philo.l_eat + philo.dat->time_to_die;
-	pthread_mutex_unlock(philo.eat);
+	pthread_mutex_unlock(philo.dat->loopm);
 	return (ret);
 }
 
-void	*check_death(void *arg)
+static int	check_death(t_philo *philos)
 {
-	unsigned long			time;
-	unsigned long	time2;
-	t_philo		*philo;
+	int				philo;
+	unsigned long	time;
 
-	philo = (t_philo *)arg;
-	time = in_time(*philo);
-	time2 = time;
-	while (42)
-	{	
+	philo = philos->dat->n_philos;
+	while (philo--)
+	{
+		time = in_time(philos[philo]);
 		if (time < time_us())
 		{
-			pthread_mutex_lock(philo->dat->print);
-			kill(philo->dat);
+			pthread_mutex_lock(philos->dat->print);
+			kill(philos->dat);
 			printf("%05ld %i is dead\n",
-				(time - philo->dat->init_time) / 1000, philo->id);
-			pthread_mutex_unlock(philo->dat->print);
-			return (NULL);
+				(time - philos->dat->init_time) / 1000, philos[philo].id);
+			pthread_mutex_unlock(philos->dat->print);
+			return (1);
 		}
-		if (check_loop(philo->dat))
-			return (NULL);
-		usleep(50);
 	}
+	return (0);
 }
 
 static void	check_simulation(t_philo *philos)
 {
 	while (42)
 	{
-		if (check_loop(philos->dat))
+		if (check_death(philos))
 			return ;
 		if (check_meals(philos->dat) == philos->dat->n_philos)
 		{

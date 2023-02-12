@@ -15,7 +15,7 @@
 static void	think(t_philo *philo)
 {
 	ph_printf('t', philo);
-	usleep(50);
+	usleep(200);
 }
 
 static void	sleepth(t_philo *philo)
@@ -52,7 +52,7 @@ void	*routine(void *arg)
 	meals = 0;
 	philo = (t_philo *)arg;
 	if (philo->id % 2 == 0)
-		usleep(200);
+		usleep(500);
 	if (philo->dat->n_philos == 1)
 	{
 		ph_printf('f', philo);
