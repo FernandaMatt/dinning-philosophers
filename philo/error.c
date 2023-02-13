@@ -6,7 +6,7 @@
 /*   By: fcaetano <fernandacunha@id.uff.br>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 15:40:31 by fcaetano          #+#    #+#             */
-/*   Updated: 2022/09/19 19:52:08 by fcaetano         ###   ########.fr       */
+/*   Updated: 2023/02/13 15:52:53 by fcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int	check_entry(char **entry)
 				return (0);
 		}
 		if ((ft_strlen(*entry) >= 10
-				&& check_max(*entry, "2147483647", "2147483648"))
+				&& check_max(*entry, "2147483648", "2147483649"))
 			|| ft_atoi(*entry) <= 0)
 			return (0);
 		entry++;

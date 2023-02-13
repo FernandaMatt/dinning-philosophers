@@ -6,7 +6,7 @@
 /*   By: fcaetano <fernandacunha@id.uff.br>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:51:36 by fcaetano          #+#    #+#             */
-/*   Updated: 2023/02/01 16:55:29 by fcaetano         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:04:06 by fcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,12 @@ typedef struct s_philo
 }	t_philo;
 
 int				check_entry(char **entry);
-int				ft_atoi(char *str);
+long int		ft_atoi(char *str);
 void			init_params(t_dat *dat, char **argv);
 t_philo			*init_philos(t_dat *dat);
 void			*routine(void *arg);
 unsigned long	time_us(void);
-void			ft_usleep(unsigned long wait);
+void			ft_usleep(unsigned long wait, t_dat *dat);
 int				right_fork(t_philo philo);
 int				check_loop(t_dat *dat);
 void			ph_printf(char act, t_philo *philo);

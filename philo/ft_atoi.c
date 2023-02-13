@@ -6,7 +6,7 @@
 /*   By: fcaetano <fernandacunha@id.uff.br>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:39:31 by fcaetano          #+#    #+#             */
-/*   Updated: 2022/06/08 10:08:30 by fcaetano         ###   ########.fr       */
+/*   Updated: 2023/02/13 15:42:04 by fcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_catnbr(char *str)
 {
 	unsigned int	c;
 	unsigned int	mult;
-	int				result;
+	long int		result;
 
 	c = 0;
 	while (str[c] >= '0' && str[c] <= '9' && str[c] != 0)
@@ -37,9 +37,9 @@ static int	ft_catnbr(char *str)
 	return (result);
 }
 
-int	ft_atoi(char *str)
+long int	ft_atoi(char *str)
 {
-	int	result;
+	long int	result;
 
 	result = 1;
 	str = ft_wspaces(str);

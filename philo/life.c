@@ -6,7 +6,7 @@
 /*   By: fcaetano <fernandacunha@id.uff.br>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 13:56:56 by fcaetano          #+#    #+#             */
-/*   Updated: 2023/02/12 13:56:58 by fcaetano         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:21:18 by fcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ static void	think(t_philo *philo)
 static void	sleepth(t_philo *philo)
 {
 	ph_printf('s', philo);
-	ft_usleep(philo->dat->time_to_sleep - (time_us() - philo->l_sleep));
+	ft_usleep(philo->dat->time_to_sleep - (time_us()
+			- philo->l_sleep), philo->dat);
 }
 
 static void	forks(t_philo *philo, pthread_mutex_t *r_f, pthread_mutex_t *l_f)
@@ -31,7 +32,7 @@ static void	forks(t_philo *philo, pthread_mutex_t *r_f, pthread_mutex_t *l_f)
 	pthread_mutex_lock(l_f);
 	ph_printf('f', philo);
 	ph_printf('e', philo);
-	ft_usleep(philo->dat->time_to_eat - (time_us() - philo->l_eat));
+	ft_usleep(philo->dat->time_to_eat - (time_us() - philo->l_eat), philo->dat);
 	pthread_mutex_unlock(r_f);
 	pthread_mutex_unlock(l_f);
 }

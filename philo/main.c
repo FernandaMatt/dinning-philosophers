@@ -6,7 +6,7 @@
 /*   By: fcaetano <fernandacunha@id.uff.br>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:51:43 by fcaetano          #+#    #+#             */
-/*   Updated: 2023/02/01 18:16:34 by fcaetano         ###   ########.fr       */
+/*   Updated: 2023/02/13 15:31:27 by fcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ static int	check_death(t_philo *philos)
 		time = in_time(philos[philo]);
 		if (time < time_us())
 		{
+			time = time_us();
 			pthread_mutex_lock(philos->dat->print);
 			kill(philos->dat);
 			printf("%05ld %i is dead\n",

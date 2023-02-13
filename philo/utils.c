@@ -6,7 +6,7 @@
 /*   By: fcaetano <fernandacunha@id.uff.br>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 13:57:04 by fcaetano          #+#    #+#             */
-/*   Updated: 2023/02/12 13:57:06 by fcaetano         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:05:23 by fcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ unsigned long	time_us(void)
 	return ((time.tv_sec * 1000000) + time.tv_usec);
 }
 
-void	ft_usleep(unsigned long wait)
+void	ft_usleep(unsigned long wait, t_dat *dat)
 {
 	unsigned long	start;
 	unsigned long	now;
@@ -31,6 +31,8 @@ void	ft_usleep(unsigned long wait)
 	{
 		now = time_us();
 		usleep(50);
+		if (check_loop(dat))
+			return ;
 	}
 	return ;
 }
