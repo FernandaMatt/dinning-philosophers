@@ -10,7 +10,7 @@ The present program was coded in C and shows a solution to the problem using POS
 
 
 ### Usage
-The program takes 4-5 arguments:
+The program takes in 4-5 arguments:
 
 ◦ number_of_philosophers: The number of philosophers and also the number
 of forks
