@@ -6,11 +6,11 @@
 /*   By: fcaetano <fernandacunha@id.uff.br>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 13:57:04 by fcaetano          #+#    #+#             */
-/*   Updated: 2023/02/13 16:05:23 by fcaetano         ###   ########.fr       */
+/*   Updated: 2023/03/17 14:56:20 by fcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosophers.h"
+#include "../include/philosophers.h"
 
 unsigned long	time_us(void)
 {

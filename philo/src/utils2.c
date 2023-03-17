@@ -6,11 +6,11 @@
 /*   By: fcaetano <fernandacunha@id.uff.br>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 14:11:48 by fcaetano          #+#    #+#             */
-/*   Updated: 2023/02/12 14:11:49 by fcaetano         ###   ########.fr       */
+/*   Updated: 2023/03/17 14:56:33 by fcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosophers.h"
+#include "../include/philosophers.h"
 
 int	check_meals(t_dat *dat)
 {

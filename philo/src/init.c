@@ -6,11 +6,11 @@
 /*   By: fcaetano <fernandacunha@id.uff.br>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 13:56:51 by fcaetano          #+#    #+#             */
-/*   Updated: 2023/02/12 13:56:53 by fcaetano         ###   ########.fr       */
+/*   Updated: 2023/03/17 14:55:22 by fcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosophers.h"
+#include "../include/philosophers.h"
 
 void	init_params(t_dat *dat, char **argv)
 {

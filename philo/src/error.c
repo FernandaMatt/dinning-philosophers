@@ -6,11 +6,11 @@
 /*   By: fcaetano <fernandacunha@id.uff.br>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 15:40:31 by fcaetano          #+#    #+#             */
-/*   Updated: 2023/02/13 15:52:53 by fcaetano         ###   ########.fr       */
+/*   Updated: 2023/03/17 14:56:50 by fcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosophers.h"
+#include "../include/philosophers.h"
 
 static unsigned int	ft_strlen(const char *str)
 {

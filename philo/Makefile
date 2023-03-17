@@ -1,6 +1,13 @@
 NAME = philo
 
-SRCS = main.c error.c ft_atoi.c life.c init.c utils.c utils2.c free.c
+SRCS = src/main.c \
+	   src/error.c \
+	   src/ft_atoi.c \
+	   src/life.c \
+	   src/init.c \
+	   src/utils.c \
+	   src/utils2.c \
+	   src/free.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -14,10 +21,10 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o  $(NAME)
 
 clean:
-	rm -rf *.o
+	rm -rf src/*.o
 
 fclean:
-	rm -rf *.o philo
+	rm -rf src/*.o philo
 
 re: fclean all
 

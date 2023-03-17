@@ -6,11 +6,11 @@
 /*   By: fcaetano <fernandacunha@id.uff.br>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:51:43 by fcaetano          #+#    #+#             */
-/*   Updated: 2023/02/13 15:31:27 by fcaetano         ###   ########.fr       */
+/*   Updated: 2023/03/17 14:56:06 by fcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosophers.h"
+#include "../include/philosophers.h"
 
 static void	terminate_philos(t_philo *philo, int np)
 {
